@@ -26,9 +26,7 @@ A modern and responsive developer portfolio built using React. This portfolio sh
 
 ### Languages
 - C++
-- Java
 - JavaScript
-- SQL
 
 ### Frontend
 - React.js
@@ -81,11 +79,7 @@ Topics include:
 - Linked Lists
 - Stacks & Queues
 - Trees
-- Graphs
 - Recursion
-- Backtracking
-- Dynamic Programming
-- Greedy Algorithms
 
 ---
 
@@ -139,7 +133,7 @@ npm run dev
 
 🐙 GitHub: https://github.com/harshiitchouhan
 
-💼 LinkedIn: Add your LinkedIn profile here
+💼 LinkedIn:[ (https://www.linkedin.com/in/harshit-chouhan-3a0526346/)](https://www.linkedin.com/in/harshit-chouhan-3a0526346/)
 
 ---
 
