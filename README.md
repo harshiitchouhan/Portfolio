@@ -26,9 +26,7 @@ A modern and responsive developer portfolio built using React. This portfolio sh
 
 ### Languages
 - C++
-- Java
 - JavaScript
-- SQL
 
 ### Frontend
 - React.js
@@ -45,7 +43,6 @@ A modern and responsive developer portfolio built using React. This portfolio sh
 ### Database & Cloud
 - MongoDB
 - Redis
-- Firebase
 - Cloudinary
 
 ### Tools
