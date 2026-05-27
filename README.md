@@ -4,7 +4,7 @@ A modern and responsive developer portfolio built using React. This portfolio sh
 
 ## 🚀 Live Demo
 
-🔗 [[https://your-portfolio-link.vercel.app](https://harshitchouhan.vercel.app/)]
+🔗https://harshitchouhan.vercel.app/
 
 ---
 
