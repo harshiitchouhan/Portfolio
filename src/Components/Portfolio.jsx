@@ -200,6 +200,12 @@ export default function Portfolio() {
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
 
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://harshitchouhan.vercel.app/"
+                />
+
                 <input type="text" name="name" placeholder="Your Name" required />
                 <input type="email" name="email" placeholder="Your Email" required />
                 <input type="text" name="subject" placeholder="Subject" />
