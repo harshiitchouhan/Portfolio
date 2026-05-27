@@ -1,4 +1,4 @@
-import "../UnderDeployment.css";
+import "./UnderDeployment.css";
 
 export default function UnderDeployment() {
   return (

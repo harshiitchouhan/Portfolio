@@ -1,4 +1,4 @@
-import "../index.css";
+import "./Portfolio.css";
 
 export default function Portfolio() {
   const skills = [
