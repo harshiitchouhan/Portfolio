@@ -10,7 +10,7 @@ A modern and responsive developer portfolio built using React. This portfolio sh
 
 ## ✨ Features
 
-- 🎨 Modern and responsive UI
+- 🎨 Simple and responsive UI
 - 📱 Mobile-friendly design
 - 👨‍💻 About Me section
 - 🛠 Tech Stack showcase
@@ -139,7 +139,7 @@ npm run dev
 
 🐙 GitHub: https://github.com/harshiitchouhan
 
-💼 LinkedIn: [Add your LinkedIn profile here](https://www.linkedin.com/in/harshit-chouhan-3a0526346/)
+💼 LinkedIn: https://www.linkedin.com/in/harshit-chouhan-3a0526346/
 
 ---
 
