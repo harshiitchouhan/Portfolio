@@ -1,0 +1,54 @@
+.deployment-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #2a2a2a, #111);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.deployment-card {
+  max-width: 520px;
+  width: 100%;
+  background: #242424;
+  border: 1px solid #3a3a3a;
+  border-radius: 22px;
+  padding: 45px 30px;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.deployment-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.deployment-card h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.deployment-card p {
+  color: #aaa;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.back-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #ffbf00;
+  color: #111;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #ffd34d;
+  transform: translateY(-2px);
+}
