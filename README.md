@@ -86,21 +86,6 @@ Topics include:
 
 ---
 
-## 📸 Screenshots
-
-### Home Page
-
-![Home](./screenshots/home.png)
-
-### Projects Section
-
-![Projects](./screenshots/projects.png)
-
-### Contact Section
-
-![Contact](./screenshots/contact.png)
-
----
 
 ## ⚙️ Installation
 
