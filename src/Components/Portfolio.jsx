@@ -26,8 +26,8 @@ export default function Portfolio() {
       title: "Swiggy Frontend Clone",
       desc: "A responsive food delivery frontend clone using live API data and modern React concepts.",
       img: "/swiggy.png",
-      live: "/under-deployment",
-      github: "https://github.com/harshiitchouhan",
+      live: "https://swiggy-frontend-eta.vercel.app/",
+      github: "https://github.com/harshiitchouhan/Swiggy-Frontend",
       tags: ["React", "CSS", "API", "JavaScript"],
     },
     // {
