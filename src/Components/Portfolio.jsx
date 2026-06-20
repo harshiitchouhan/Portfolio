@@ -1,17 +1,37 @@
 import "./Portfolio.css";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaGithubAlt,
+} from "react-icons/fa";
+
+import {
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+  SiPostman,
+  
+} from "react-icons/si";
+
+
 
 export default function Portfolio() {
-  const skills = [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "React",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "Git & GitHub",
-    "Tailwind CSS"
-  ];
+const skills = [
+  { name: "HTML5", icon: FaHtml5 },
+  { name: "CSS3", icon: FaCss3Alt },
+  { name: "JavaScript", icon: FaJs },
+  { name: "React", icon: FaReact },
+  { name: "Tailwind CSS", icon: SiTailwindcss },
+  { name: "Node.js", icon: FaNodeJs },
+  { name: "Express.js", icon: SiExpress },
+  { name: "MongoDB", icon: SiMongodb },
+  { name: "Github", icon: FaGithubAlt, },
+  { name: "Postman", icon: SiPostman },
+];
 
   const projects = [
     {
@@ -78,6 +98,7 @@ export default function Portfolio() {
             <a href="https://www.linkedin.com/in/harshit-chouhan-3a0526346/" target="_blank" rel="noreferrer">
               Linkedin
             </a>
+            <a href="https://leetcode.com/u/Harshiitchouhan/"target="_blank" rel="noreferrer" >Leetcode</a>
           </div>
         </aside>
 
@@ -109,11 +130,16 @@ export default function Portfolio() {
             <div className="line"></div>
 
             <div className="skills-grid">
-              {skills.map((skill) => (
-                <div className="skill-card" key={skill}>
-                  {skill}
-                </div>
-              ))}
+              {skills.map((skill) => {
+                const Icon = skill.icon;
+
+                return (
+                  <div className="skill-card" key={skill.name}>
+                    <Icon className="skill-icon" />
+                    <span>{skill.name}</span>
+                  </div>
+                );
+              })}
             </div>
           </section>
 
