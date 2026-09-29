@@ -19,9 +19,84 @@ import {
   SiCplusplus
   
 } from "react-icons/si";
+import { useEffect, useState } from "react";
+import {ActivityCalendar} from "react-activity-calendar";
 
 
 export default function Portfolio() {
+const [leetcodeData, setLeetcodeData] = useState([]);
+const [loading, setLoading] = useState(true);
+
+
+useEffect(() => {
+    // Generate a full 365-day calendar baseline mapped by YYYY-MM-DD
+    const generateEmptyYear = () => {
+      const yearMap = {};
+      const today = new Date();
+      for (let i = 365; i >= 0; i--) {
+        const d = new Date(today);
+        d.setDate(d.getDate() - i);
+        const dateStr = d.toISOString().split("T")[0];
+        yearMap[dateStr] = { date: dateStr, count: 0, level: 0 };
+      }
+      return yearMap;
+    };
+
+    const processCalendarData = (rawCalendar) => {
+      const fullYearMap = generateEmptyYear();
+      const parsed = typeof rawCalendar === "string" ? JSON.parse(rawCalendar) : rawCalendar;
+
+      Object.keys(parsed).forEach((timestamp) => {
+        const dateStr = new Date(parseInt(timestamp) * 1000).toISOString().split("T")[0];
+        if (fullYearMap[dateStr]) {
+          const count = parsed[timestamp];
+          let level = 1;
+          if (count > 8) level = 4;
+          else if (count > 5) level = 3;
+          else if (count > 2) level = 2;
+
+          fullYearMap[dateStr] = { date: dateStr, count, level };
+        }
+      });
+
+      return Object.values(fullYearMap);
+    };
+
+    // Primary Fetch with Fallback Backup
+    const fetchLeetCodeData = async () => {
+      try {
+        // Primary API endpoint
+        const res = await fetch("https://leetcode-api-faisalshohag.vercel.app/Harshiitchouhan");
+        if (!res.ok) throw new Error("Primary API rate limited");
+        const data = await res.json();
+        
+        if (data && data.submissionCalendar) {
+          setLeetcodeData(processCalendarData(data.submissionCalendar));
+          setLoading(false);
+          return;
+        }
+      } catch (err) {
+        console.warn("Primary API failed, trying fallback API...", err);
+      }
+
+      // Fallback API Endpoint
+      try {
+        const res = await fetch("https://alfa-leetcode-api.onrender.com/userProfileCalendar?username=Harshiitchouhan");
+        if (!res.ok) throw new Error("Fallback API rate limited");
+        const data = await res.json();
+        if (data && data.submissionCalendar) {
+          setLeetcodeData(processCalendarData(data.submissionCalendar));
+        }
+      } catch (err) {
+        console.error("All LeetCode APIs failed or rate limited:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchLeetCodeData();
+  }, []);
+
 const skills = [
   { name: "HTML5", icon: FaHtml5 },
   { name: "CSS3", icon: FaCss3Alt },
@@ -58,7 +133,7 @@ const skills = [
     },
     {
       title: "Amazon Clone",
-      desc: "A responsive e-commerce frontend clone built with HTML and CSS.",
+      desc: "An e-commerce frontend clone built with HTML and CSS.",
       img: "/amazon.png",
       live: "https://amazonbyhc.netlify.app/",
       github: "https://github.com/harshiitchouhan/AmazonClone",
@@ -156,6 +231,31 @@ const skills = [
               })}
             </div>
           </section>
+
+          <section id="leetcode" className="section">
+              <h2 className="heading">Leetcode Activity</h2>
+              <div className="line"></div> {/* Yellow underline accent */}
+
+              <div className="leetcode-card">
+                {loading ? (
+                  <p style={{ color: "#aaa" }}>Loading LeetCode activity...</p>
+                ) : leetcodeData.length > 0 ? (
+                  <ActivityCalendar
+                    data={leetcodeData}
+                    blockSize={10}
+                    blockMargin={3}
+                    fontSize={14}
+                    theme={{
+                      dark: ["#2d2d2d", "#0e4429", "#006d32", "#26a641", "#39d353"],
+                    }}
+                    colorScheme="dark"
+                    showWeekdayLabels
+                  />
+                ) : (
+                  <p style={{ color: "#aaa" }}>Unable to load activity data.</p>
+                )}
+              </div>
+            </section>
 
           <section id="education" className="section">
             <h2 className="heading">Education</h2>

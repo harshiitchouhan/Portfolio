@@ -469,3 +469,35 @@ body {
   font-family: Arial, sans-serif;
   background: #111;
 }
+
+/* LeetCode Container Card */
+.leetcode-card {
+  background: #1a1a1a;
+  border: 1px solid #3a3a3a;
+  border-radius: 18px;
+  padding: 25px;
+  overflow-x: auto;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leetcode-card:hover {
+  border-color: #ffbf00;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Custom horizontal scrollbar for smaller screens */
+.leetcode-card::-webkit-scrollbar {
+  height: 6px;
+}
+
+.leetcode-card::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 4px;
+}
+
+.leetcode-card::-webkit-scrollbar-thumb:hover {
+  background: #ffbf00;
+}
