@@ -14,9 +14,10 @@ import {
   SiMongodb,
   SiTailwindcss,
   SiPostman,
+  SiRedis,
+  SiCloudinary
   
 } from "react-icons/si";
-
 
 
 export default function Portfolio() {
@@ -31,6 +32,9 @@ const skills = [
   { name: "MongoDB", icon: SiMongodb },
   { name: "Github", icon: FaGithubAlt, },
   { name: "Postman", icon: SiPostman },
+  { name: "Redis", icon: SiRedis },
+  { name: "Cloudinary", icon: SiCloudinary },
+  
 ];
 
   const projects = [
@@ -50,14 +54,22 @@ const skills = [
       github: "https://github.com/harshiitchouhan/Swiggy-Frontend",
       tags: ["React", "CSS", "API", "JavaScript"],
     },
-    // {
-    //   title: "Amazon Clone",
-    //   desc: "A responsive e-commerce frontend clone built with HTML and CSS.",
-    //   img: "/amazon.png",
-    //   live: "https://amazonbyhc.netlify.app/",
-    //   github: "https://github.com/harshiitchouhan",
-    //   tags: ["HTML", "CSS", "Responsive"],
-    // },
+    {
+      title: "Amazon Clone",
+      desc: "A responsive e-commerce frontend clone built with HTML and CSS.",
+      img: "/amazon.png",
+      live: "https://amazonbyhc.netlify.app/",
+      github: "https://github.com/harshiitchouhan/AmazonClone",
+      tags: ["HTML", "CSS"],
+    },
+    {
+      title: "Astrology Prediction",
+      desc: "Get Astrology Insights which tells about you based on your DOB",
+      img: "/astro.png",
+      live: "https://amazonbyhc.netlify.app/",
+      github: "https://github.com/harshiitchouhan/AstrologyPrediction",
+      tags: ["HTML", "CSS"],
+    },
   ];
 
   return (
