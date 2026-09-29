@@ -15,7 +15,8 @@ import {
   SiTailwindcss,
   SiPostman,
   SiRedis,
-  SiCloudinary
+  SiCloudinary,
+  SiCplusplus
   
 } from "react-icons/si";
 
@@ -34,6 +35,7 @@ const skills = [
   { name: "Postman", icon: SiPostman },
   { name: "Redis", icon: SiRedis },
   { name: "Cloudinary", icon: SiCloudinary },
+  { name: "C++", icon: SiCplusplus },
   
 ];
 
