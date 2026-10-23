@@ -126,7 +126,7 @@ const skills = [
 
     {
       title: "Webloom - AI-powered website builder ",
-      desc: "Webloom is an AI-powered website builder that transforms simple text prompts into beautiful, responsive websites. Built using the MERN stack, it enables users to generate, customize, preview, and deploy websites without writing code. With AI integration, a credit-based generation system, and secure payment functionality, Webloom makes website creation faster, smarter, and accessible to everyone.",
+      desc: "Webloom is an AI-powered website builder that transforms simple text prompts into beautiful, responsive website.",
       img: "/aiweb.png",
       live: "https://webloom-ai-dev.vercel.app/",
       github: "https://github.com/harshiitchouhan/AI_Website_Frontend",
