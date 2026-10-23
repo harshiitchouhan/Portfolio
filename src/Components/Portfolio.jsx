@@ -131,7 +131,7 @@ const skills = [
       img: "/aiweb.png",
       live: "https://webloom-ai-dev.vercel.app/",
       github: "https://github.com/harshiitchouhan/AI_Website_Frontend",
-      tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "AI" ,"Razorpay"],
+      tags: ["React", "Node.js", "Express", "MongoDB","AI", "Tailwind CSS" ,"Razorpay"],
     },
 
     {
