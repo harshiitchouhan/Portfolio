@@ -121,8 +121,18 @@ const skills = [
       img: "/codebitt.png",
       live: "https://codebit-dev.vercel.app/",
       github: "https://github.com/harshiitchouhan/Coding-Platform",
-      tags: ["React", "Node.js", "Express", "MongoDB", "Redis", "AI"],
+      tags: ["React", "Node.js", "Express", "MongoDB", "Redis", "AI", "Redux" , "Cloudinary" , "Judge0" ,"Tailwind CSS" , "REST API"],
     },
+
+    {
+      title: "Webloom - AI-powered website builder ",
+      desc: "Webloom is an AI-powered website builder that transforms simple text prompts into beautiful, responsive websites. Built using the MERN stack, it enables users to generate, customize, preview, and deploy websites without writing code. With AI integration, a credit-based generation system, and secure payment functionality, Webloom makes website creation faster, smarter, and accessible to everyone.",
+      img: "/aiweb.png",
+      live: "https://webloom-ai-dev.vercel.app/",
+      github: "https://github.com/harshiitchouhan/AI_Website_Frontend",
+      tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "AI" ,],
+    },
+
     {
       title: "Swiggy Frontend Clone",
       desc: "A responsive food delivery frontend clone using live API data and modern React concepts.",
